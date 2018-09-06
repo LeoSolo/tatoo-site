@@ -1,15 +1,29 @@
 import * as React from 'react'
 
-export interface HeaderProps {
-    title?: string
+import { Menu } from './Menu'
+
+interface HeaderProps {
+    title: string
 }
 
 export class Header extends React.Component<HeaderProps, {}> {
+
+    constructor(props) {
+        super(props)
+    }
+
     render() {
         return (
-            <div className="header-container">
-                <h1 className="page-title">{this.props.title ? this.props.title : 'Главная'}</h1>
-            </div>
+            <section className="header-container">
+                <div className="logo-container">
+                    <div className="logo" />
+                    <h2>Tatoo</h2>
+                </div>
+
+                <Menu title={this.props.title}/>
+
+                <h2 className="page-title">{this.props.title}</h2>
+            </section>
         )
     }
 }

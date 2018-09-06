@@ -5,16 +5,15 @@ import { RouterState } from 'react-router-redux'
 
 import { StoreState } from '../reducers'
 import { ApplicationState } from '../reducers/application'
-import { Header } from '../components/Header/Header'
 import { setLoading, SetLoadingAction, ApplicationActions } from '../actions/application'
 
-interface GalleryProps {
+interface ContactsProps {
 	application: ApplicationState
 	routing: RouterState
 	setLoading: (isLoading: boolean) => SetLoadingAction
 }
 
-export class Gallery extends React.Component<GalleryProps, {}> {
+export class Contacts extends React.Component<ContactsProps, {}> {
 
 	constructor(props) {
 		super(props)
@@ -24,7 +23,6 @@ export class Gallery extends React.Component<GalleryProps, {}> {
 	render() {
 		return (
 			<div>
-				<Header title="Галерея" />
 				<div className="devText">Page in development...</div>
 			</div>
 		)
@@ -47,7 +45,7 @@ function mapDispatchToProps(dispatch: Dispatch<ApplicationActions>) {
 	)
 }
 
-export const GalleryContainer = connect(
+export const ContactsContainer = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(Gallery)
+)(Contacts)

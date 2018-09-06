@@ -1,5 +1,8 @@
 @import './constants.scss';
+
 @import './components/header.scss';
+
+@import './containers/news.scss';
 
 * {
   box-sizing: border-box;
@@ -13,4 +16,32 @@ body {
   padding: 0;
   background: $mainBackground;
   font-size: $fontSize;
+  font-family: $fontFamily;
+}
+
+.devText {
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+  line-height: 200px;
+  color: grey;
+}
+
+.btn {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  &:hover {
+    cursor: pointer;
+    opacity: .7;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

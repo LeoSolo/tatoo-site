@@ -5,7 +5,6 @@ import { RouterState } from 'react-router-redux'
 
 import { StoreState } from '../reducers'
 import { ApplicationState } from '../reducers/application'
-import { Header } from '../components/Header'
 import { setLoading, SetLoadingAction, ApplicationActions } from '../actions/application'
 
 interface AppProps {
@@ -24,7 +23,7 @@ export class App extends React.Component<AppProps, {}> {
 	render() {
 		return (
 			<div>
-				<Header />
+				<div className="devText">Page in development...</div>
 			</div>
 		)
 	}

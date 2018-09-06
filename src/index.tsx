@@ -3,8 +3,9 @@ import * as ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { createHashHistory, createBrowserHistory } from 'history'
 import { ConnectedRouter } from 'react-router-redux'
-import { Routes } from './containers/Routes'
 import './styles/base.scss'
+
+import { RoutesContainer } from './containers/Routes'
 
 import { configureStore } from './store/configureStore'
 
@@ -14,7 +15,7 @@ const store = configureStore(history)
 ReactDOM.render(
 	<Provider store={store}>
 		<ConnectedRouter history={history}>
-			<Routes />
+			<RoutesContainer />
 		</ConnectedRouter>
 	</Provider>,
 	document.getElementById('root')
