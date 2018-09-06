@@ -39,10 +39,6 @@ export class Menu extends React.Component<MenuProps> {
                     <Link to={LINKS.CONTACTS}>{PAGE_TITLES.CONTACTS}</Link>
                 </li>
 
-                <li className={classnames('btn', {active: this.props.link === LINKS.CONTACTS})}>
-                    <Link to={LINKS.CONTACTS}>{PAGE_TITLES.CONTACTS}</Link>
-                </li>
-
                 {
                     isAdminConsoleActive &&
                     <li className="btn consoleQuit">
