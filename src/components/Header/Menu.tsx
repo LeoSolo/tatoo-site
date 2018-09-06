@@ -6,14 +6,10 @@ import { LINKS } from '../../constants/links'
 
 
 interface MenuProps {
-    title: string
+    link: string
 }
 
-interface MenuStates {
-    title: ''
-}
-
-export class Menu extends React.Component<MenuProps, MenuStates> {
+export class Menu extends React.Component<MenuProps> {
 
     constructor(props) {
         super(props)
@@ -23,16 +19,16 @@ export class Menu extends React.Component<MenuProps, MenuStates> {
 
         return (
             <ul className="menu-list">
-                <li className={classnames('btn', {active: this.props.title === LINKS.MAIN})}>
+                <li className={classnames('btn', {active: this.props.link === LINKS.MAIN})}>
                     <Link to={LINKS.MAIN}>Главная</Link>
                 </li>
-                <li className={classnames('btn', {active: this.props.title === LINKS.NEWS})}>
+                <li className={classnames('btn', {active: this.props.link === LINKS.NEWS})}>
                     <Link to={LINKS.NEWS}>Новости</Link>
                 </li>
-                <li className={classnames('btn', {active: this.props.title === LINKS.GALLERY})}>
+                <li className={classnames('btn', {active: this.props.link === LINKS.GALLERY})}>
                     <Link to={LINKS.GALLERY}>Галерея</Link>
                 </li>
-                <li className={classnames('btn', {active: this.props.title === LINKS.CONTACTS})}>
+                <li className={classnames('btn', {active: this.props.link === LINKS.CONTACTS})}>
                     <Link to={LINKS.CONTACTS}>Контакты</Link>
                 </li>
             </ul>

@@ -2,6 +2,9 @@
 section.header-container {
   position: relative;
   width: 100%;
+  height: $headerHeight;
+  min-height: 140px;
+  max-height: 202px;
   background: $headerBackground;
   display: flex;
   flex-direction: column;
@@ -18,8 +21,12 @@ section.header-container {
     align-items: center;
     div.logo {
       position: relative;
-      height: 110px;
-      width: 110px;
+      height: calc(#{$headerHeight}/2);
+      width: calc(#{$headerHeight}/2);
+      min-height: 68px;
+      min-width: 68px;
+      max-height: 106px;
+      max-width: 106px;
       background: purple;
       border-radius: 50%;
       margin-left: 8px;
@@ -41,6 +48,7 @@ section.header-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    min-height: 38px;
     li {
       margin-left: 8px;
       height: 38px;
@@ -55,6 +63,7 @@ section.header-container {
         }
       }
       a {
+        font-size: 1.1em;
         color: #000;
         text-decoration: none;
       }

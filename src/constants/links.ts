@@ -2,5 +2,6 @@ export const LINKS = {
     MAIN: '/',
     NEWS: '/news',
     GALLERY: '/gallery',
-    CONTACTS: '/contacts'
+    CONTACTS: '/contacts',
+    ADMIN: '/admin-console'
 }

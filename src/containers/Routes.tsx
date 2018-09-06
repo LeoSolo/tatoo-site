@@ -6,14 +6,15 @@ import {App, AppContainer} from './App'
 import { NewsContainer } from './News'
 import { GalleryContainer } from './Gallery'
 import { ContactsContainer } from './Contacts'
+import { AdminConsoleContainer } from './AdminConsole'
 
 import { LINKS } from '../constants/links'
 
 import { Header } from '../components/Header/Header'
 import { RouterState } from 'react-router-redux'
 
-import {StoreState} from "../reducers"
-import {connect, Dispatch} from "react-redux"
+import { StoreState } from "../reducers"
+import { connect, Dispatch } from "react-redux"
 
 interface RoutesProps {
     routing: RouterState
@@ -21,7 +22,6 @@ interface RoutesProps {
 
 export class Routes extends React.Component<RoutesProps> {
     render() {
-        console.log()
 
         return (
 			<React.Fragment>
@@ -48,6 +48,11 @@ export class Routes extends React.Component<RoutesProps> {
                         path={LINKS.CONTACTS}
                         component={ContactsContainer}
                     />
+                    <Route
+                        exact={true}
+                        path={LINKS.ADMIN}
+                        component={AdminConsoleContainer}
+                    />
 				</Switch>
 			</React.Fragment>
         )
@@ -63,4 +68,3 @@ function mapStateToProps(state: StoreState) {
 export const RoutesContainer = connect(
     mapStateToProps
 )(Routes)
-
