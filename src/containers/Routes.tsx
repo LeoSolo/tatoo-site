@@ -58,7 +58,7 @@ export class Routes extends React.Component<RoutesProps> {
                     </Switch>
                 </section>
 
-            <Footer />
+            <Footer isConsoleActive={this.props.routing.location ? this.props.routing.location.pathname === LINKS.ADMIN : false}/>
 			</React.Fragment>
         )
     }

@@ -5,6 +5,8 @@ import { Menu } from './Menu'
 import { LINKS } from '../../constants/links'
 import { PAGE_TITLES } from '../../localization/pageTitles'
 
+import { Link } from "react-router-dom"
+
 interface HeaderProps {
     title: string
 }
@@ -44,7 +46,9 @@ export class Header extends React.Component<HeaderProps, {}> {
                     <h2>Tatoo</h2>
                 </div>
 
-                <Menu link={this.props.title}/>
+                {
+                    <Menu link={this.props.title}/>
+                }
 
                 <h2 className="page-title">{title}</h2>
             </section>

@@ -68,5 +68,13 @@ section.header-container {
         text-decoration: none;
       }
     }
+    &.withBack {
+      li {
+        display: none;
+        &.consoleQuit {
+          display: flex;
+        }
+      }
+    }
   }
 }
