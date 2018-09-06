@@ -21,32 +21,54 @@ export class Menu extends React.Component<MenuProps> {
         let isAdminConsoleActive = this.props.link === LINKS.ADMIN
 
         return (
-            <ul className={classnames('menu-list', {withBack: isAdminConsoleActive})}>
-
-                <li className={classnames('btn', {active: this.props.link === LINKS.MAIN})}>
-                    <Link to={LINKS.MAIN}>{PAGE_TITLES.MAIN}</Link>
-                </li>
-
-                <li className={classnames('btn', {active: this.props.link === LINKS.NEWS})}>
-                    <Link to={LINKS.NEWS}>{PAGE_TITLES.NEWS}</Link>
-                </li>
-
-                <li className={classnames('btn', {active: this.props.link === LINKS.GALLERY})}>
-                    <Link to={LINKS.GALLERY}>{PAGE_TITLES.GALLERY}</Link>
-                </li>
-
-                <li className={classnames('btn', {active: this.props.link === LINKS.CONTACTS})}>
-                    <Link to={LINKS.CONTACTS}>{PAGE_TITLES.CONTACTS}</Link>
-                </li>
-
+            <span>
                 {
-                    isAdminConsoleActive &&
-                    <li className="btn consoleQuit">
-                        <Link to={LINKS.MAIN}>{BUTTONS.BACK}</Link>
-                    </li>
-                }
+                    isAdminConsoleActive ?
+                    <ul className="menu-list">
 
-            </ul>
+                        <li className="btn consoleQuit">
+                            <Link to={LINKS.MAIN}>{BUTTONS.BACK}</Link>
+                        </li>
+
+                        <span>Редактировать:</span>                 /* TODO remove */
+
+                        <li className="btn consoleQuit">
+                            <Link to="#">{PAGE_TITLES.NEWS}</Link>
+                        </li>
+
+                        <li className="btn consoleQuit">
+                            <Link to="#">{PAGE_TITLES.GALLERY}</Link>
+                        </li>
+
+                        <li className="btn consoleQuit">
+                            <Link to="#">{PAGE_TITLES.CONTACTS}</Link>
+                        </li>
+
+                    </ul>
+
+                        :
+
+                        <ul className="menu-list">
+
+                            <li className={classnames('btn', {active: this.props.link === LINKS.MAIN})}>
+                                <Link to={LINKS.MAIN}>{PAGE_TITLES.MAIN}</Link>
+                            </li>
+
+                            <li className={classnames('btn', {active: this.props.link === LINKS.NEWS})}>
+                                <Link to={LINKS.NEWS}>{PAGE_TITLES.NEWS}</Link>
+                            </li>
+
+                            <li className={classnames('btn', {active: this.props.link === LINKS.GALLERY})}>
+                                <Link to={LINKS.GALLERY}>{PAGE_TITLES.GALLERY}</Link>
+                            </li>
+
+                            <li className={classnames('btn', {active: this.props.link === LINKS.CONTACTS})}>
+                                <Link to={LINKS.CONTACTS}>{PAGE_TITLES.CONTACTS}</Link>
+                            </li>
+
+                        </ul>
+                }
+            </span>
         )
     }
 }

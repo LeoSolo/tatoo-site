@@ -49,10 +49,24 @@ section.header-container {
     flex-direction: row;
     flex-wrap: wrap;
     min-height: 38px;
+    span {
+      display: block;
+      height: 38px;
+      line-height: 38px;
+      font-size: 1.1em;
+      font-style: italic;
+      margin-left: 20px;
+    }
     li {
       margin-left: 8px;
       height: 38px;
       line-height: 38px;
+      a {
+        font-size: 1.2em;
+        color: #000;
+        text-decoration: none;
+      }
+
       &.active {
         pointer-events: none;
         a{
@@ -62,19 +76,13 @@ section.header-container {
           opacity: 1;
         }
       }
-      a {
-        font-size: 1.1em;
-        color: #000;
-        text-decoration: none;
-      }
-    }
-    &.withBack {
-      li {
-        display: none;
-        &.consoleQuit {
-          display: flex;
+
+      &:hover {
+        a {
+          color: red;
         }
       }
+
     }
   }
 }
