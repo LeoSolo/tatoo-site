@@ -1,0 +1,10 @@
+
+.header-container {
+  position: relative;
+  width: 100%;
+  height: $headerHeight;
+  background: $headerBackground;
+  .page-title {
+     margin: 0;
+  }
+}

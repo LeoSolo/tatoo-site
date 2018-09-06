@@ -5,16 +5,16 @@ import { RouterState } from 'react-router-redux'
 
 import { StoreState } from '../reducers'
 import { ApplicationState } from '../reducers/application'
-import { Header } from '../components/Header'
+import { Header } from '../components/Header/Header'
 import { setLoading, SetLoadingAction, ApplicationActions } from '../actions/application'
 
-interface AppProps {
+interface GalleryProps {
 	application: ApplicationState
 	routing: RouterState
 	setLoading: (isLoading: boolean) => SetLoadingAction
 }
 
-export class App extends React.Component<AppProps, {}> {
+export class Gallery extends React.Component<GalleryProps, {}> {
 
 	constructor(props) {
 		super(props)
@@ -24,7 +24,8 @@ export class App extends React.Component<AppProps, {}> {
 	render() {
 		return (
 			<div>
-				<Header />
+				<Header title="Галерея" />
+				<div className="devText">Page in development...</div>
 			</div>
 		)
 	}
@@ -46,7 +47,7 @@ function mapDispatchToProps(dispatch: Dispatch<ApplicationActions>) {
 	)
 }
 
-export const AppContainer = connect(
+export const GalleryContainer = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(App)
+)(Gallery)

@@ -1,9 +1,16 @@
-$bg-color: orange;
+@import './constants.scss';
+@import './components/header.scss';
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: $bg-color;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: $mainBackground;
+  font-size: $fontSize;
 }
