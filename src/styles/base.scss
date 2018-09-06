@@ -1,6 +1,7 @@
 @import './constants.scss';
 
 @import './components/header.scss';
+@import './components/footer.scss';
 
 @import './containers/news.scss';
 
@@ -59,4 +60,8 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+section.main {
+  padding-bottom: $footerHeight;
 }

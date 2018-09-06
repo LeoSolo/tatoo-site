@@ -11,8 +11,9 @@ import { AdminConsoleContainer } from './AdminConsole'
 import { LINKS } from '../constants/links'
 
 import { Header } from '../components/Header/Header'
-import { RouterState } from 'react-router-redux'
+import { Footer } from '../components/Footer/Footer'
 
+import { RouterState } from 'react-router-redux'
 import { StoreState } from "../reducers"
 import { connect, Dispatch } from "react-redux"
 
@@ -27,33 +28,37 @@ export class Routes extends React.Component<RoutesProps> {
 			<React.Fragment>
                 <Header title={this.props.routing.location ? this.props.routing.location.pathname : ''} />
 
-				<Switch>
-					<Route
-						exact={true}
-						path={LINKS.MAIN}
-						component={AppContainer}
-					/>
-                    <Route
-                        exact={true}
-                        path={LINKS.NEWS}
-                        component={NewsContainer}
-                    />
-                    <Route
-                        exact={true}
-                        path={LINKS.GALLERY}
-                        component={GalleryContainer}
-                    />
-                    <Route
-                        exact={true}
-                        path={LINKS.CONTACTS}
-                        component={ContactsContainer}
-                    />
-                    <Route
-                        exact={true}
-                        path={LINKS.ADMIN}
-                        component={AdminConsoleContainer}
-                    />
-				</Switch>
+                <section className="main">
+                    <Switch>
+                        <Route
+                            exact={true}
+                            path={LINKS.MAIN}
+                            component={AppContainer}
+                        />
+                        <Route
+                            exact={true}
+                            path={LINKS.NEWS}
+                            component={NewsContainer}
+                        />
+                        <Route
+                            exact={true}
+                            path={LINKS.GALLERY}
+                            component={GalleryContainer}
+                        />
+                        <Route
+                            exact={true}
+                            path={LINKS.CONTACTS}
+                            component={ContactsContainer}
+                        />
+                        <Route
+                            exact={true}
+                            path={LINKS.ADMIN}
+                            component={AdminConsoleContainer}
+                        />
+                    </Switch>
+                </section>
+
+            <Footer />
 			</React.Fragment>
         )
     }
