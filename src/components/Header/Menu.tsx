@@ -30,7 +30,7 @@ export class Menu extends React.Component<MenuProps> {
                             <Link to={LINKS.MAIN}>{BUTTONS.BACK}</Link>
                         </li>
 
-                        <span>Редактировать:</span>                 /* TODO remove */
+                        <span>Редактировать:</span>
 
                         <li className="btn consoleQuit">
                             <Link to="#">{PAGE_TITLES.NEWS}</Link>

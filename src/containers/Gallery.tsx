@@ -7,13 +7,16 @@ import { StoreState } from '../reducers'
 import { ApplicationState } from '../reducers/application'
 import { setLoading, SetLoadingAction, ApplicationActions } from '../actions/application'
 
+import { GALLERY_ARRAY } from '../constants/temp'
+import { GalleryList } from '../components/GalleryList'
+
 interface GalleryProps {
 	application: ApplicationState
 	routing: RouterState
 	setLoading: (isLoading: boolean) => SetLoadingAction
 }
 
-export class Gallery extends React.Component<GalleryProps, {}> {
+export class Gallery extends React.Component<GalleryProps> {
 
 	constructor(props) {
 		super(props)
@@ -24,6 +27,7 @@ export class Gallery extends React.Component<GalleryProps, {}> {
 		return (
 			<div>
 				<div className="devText">Page in development...</div>
+				<GalleryList galleryArr={GALLERY_ARRAY} />
 			</div>
 		)
 	}
