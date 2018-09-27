@@ -26,7 +26,6 @@ export class Gallery extends React.Component<GalleryProps> {
 	render() {
 		return (
 			<div>
-				<div className="devText">Page in development...</div>
 				<GalleryList galleryArr={GALLERY_ARRAY} />
 			</div>
 		)

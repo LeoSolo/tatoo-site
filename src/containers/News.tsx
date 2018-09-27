@@ -23,8 +23,6 @@ export class News extends React.Component<NewsProps, {}> {
 	render() {
 		return (
 			<div>
-				<div className="devText">Page in development...</div>
-
 				<ul className="news-list">
 					<li>
 						<div className="img" />

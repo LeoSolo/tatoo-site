@@ -7,9 +7,7 @@ export const GALLERY_ARRAY = [
     },
     {
         name: 'NAME 1',
-        author: 'AUTHOR AUTHOR AUTHOR 1',
-        background: 'green',
-        backgroundSmall: 'green'
+        background: 'green'
     },
     {
         name: 'NAME 2',

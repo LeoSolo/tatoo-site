@@ -1,7 +1,9 @@
 import * as React from 'react'
 
+import { GalleryObject } from '../types/galleryObject'
+
 interface GalleryListProps {
-    galleryArr?: Array<Object>
+    galleryArr?: Array<GalleryObject>
 }
 
 export class GalleryList extends React.Component<GalleryListProps> {
@@ -17,7 +19,10 @@ export class GalleryList extends React.Component<GalleryListProps> {
                 {
                     this.props.galleryArr ?
                         this.props.galleryArr.map((item, i) => {
-                            return <li key={i} >123</li>
+                            return <li key={i} style={{background: item.background}} >
+                                    {item.name}
+                                    {item.author}
+                                </li>
                         })
                         :
                         'Изображений не найдено'
